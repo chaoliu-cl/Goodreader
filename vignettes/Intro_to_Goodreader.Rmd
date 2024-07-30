@@ -3,7 +3,7 @@ title: "Goodreader Quick Start Guide"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introdution to Goodreader Package}
-  %\VignetteEngine{knitr::knitr}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
