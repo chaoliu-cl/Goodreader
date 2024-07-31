@@ -20,17 +20,9 @@ the format information for each book.
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
-
 # Run the function
 format_info <- get_format_info(temp_file)
-
-# Display the results
-if (length(format_info) > 0) {
-  print(format_info)
-} else {
-  cat("No format information found. This could be due to network issues or changes in the website structure.\n")
-}
-
+print(format_info)
 # Clean up: remove the temporary file
 file.remove(temp_file)
 }

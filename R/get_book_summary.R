@@ -11,17 +11,9 @@
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
-#'
 #' # Run the function
 #' book_summary <- get_book_summary(temp_file)
-#'
-#' # Display the results
-#' if (length(book_summary) > 0) {
-#'   print(book_summary)
-#' } else {
-#'   cat("No book_summary found. This could be due to network issues or changes in the website structure.\n")
-#' }
-#'
+#' print(book_summary)
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
 get_book_summary <- function(file_path) {

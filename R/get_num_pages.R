@@ -12,17 +12,9 @@
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
-#'
 #' # Run the function
 #' num_pages <- get_num_pages(temp_file)
-#'
-#' # Display the results
-#' if (length(num_pages) > 0) {
-#'   print(num_pages)
-#' } else {
-#'   cat("No number of pages found. This could be due to network issues or changes in the website structure.\n")
-#' }
-#'
+#' print(num_pages)
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
 get_num_pages <- function(file_path) {

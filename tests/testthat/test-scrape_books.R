@@ -1,5 +1,4 @@
 # test_scrape_books.R
-
 library(testthat)
 library(httr)
 library(rvest)
@@ -9,7 +8,7 @@ library(stringr)
 library(parallel)
 
 # Mock data
-mock_book_ids <- c("1234", "5678")
+mock_book_ids <- c(1234, 5678)
 mock_html <- '<html><body>
   <h1 data-testid="bookTitle">Test Book</h1>
   <div class="DetailsLayoutRightParagraph">Book details</div>
@@ -45,20 +44,18 @@ mock_GET <- function(url) {
 
 test_that("scrape_books function works correctly", {
   skip_on_cran()
-
   # Create a temporary file with mock book IDs
   temp_file <- tempfile()
-  writeLines(mock_book_ids, temp_file)
+  writeLines(as.character(mock_book_ids), temp_file)
 
   # Mock the necessary functions
   with_mock(
     `httr::GET` = mock_GET,
     {
       result <- scrape_books(temp_file)
-
       expect_s3_class(result, "data.frame")
       expect_equal(nrow(result), length(mock_book_ids))
-      expect_equal(result$book_id, mock_book_ids)
+      expect_equal(result$book_id, as.character(mock_book_ids))
       expect_equal(result$book_title, rep("Test Book", length(mock_book_ids)))
       expect_equal(result$author, rep("Test Author", length(mock_book_ids)))
       expect_equal(result$num_pages, rep("300", length(mock_book_ids)))

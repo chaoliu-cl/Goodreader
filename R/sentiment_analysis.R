@@ -12,6 +12,7 @@
 #' @importFrom rlang sym !!
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -32,6 +33,7 @@
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 analyze_sentiment <- function(reviews_df, lexicon = "afinn") {
   # Ensure the lexicon is valid
   if (!lexicon %in% c("afinn", "bing", "nrc")) {
@@ -117,6 +119,7 @@ analyze_sentiment <- function(reviews_df, lexicon = "afinn") {
 #' @importFrom rlang sym !!
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -140,6 +143,7 @@ analyze_sentiment <- function(reviews_df, lexicon = "afinn") {
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 average_book_sentiment <- function(sentiment_df) {
   sentiment_df %>%
     dplyr::group_by(!!rlang::sym("book_id")) %>%

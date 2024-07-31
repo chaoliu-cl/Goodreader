@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-![Goodreader: Scrape and Analyze Goodreads Book Data](man/images/logo.png)
+![Goodreader: Scrape and Analyze Goodreads Book Data](man/figures/logo.png)
 
 # Goodreader
 
@@ -43,6 +43,4 @@ scrape_books(book_ids_path = "AI_books.txt")
 #Scrape book reviews
 scrape_reviews(book_ids_path = "AI_books.txt", num_reviews = 10)
 ```
-
-See the [quick start guide](/vignettes/Intro_to_Goodreader.Rmd) for more information on how to use **Goodreader**.
 

@@ -15,6 +15,7 @@ top_terms(lda_model, n = 10)
 This function extracts and prints the top terms for each topic in the LDA model.
 }
 \examples{
+\donttest{
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -33,4 +34,5 @@ top_terms(lda_model, n = 5)
 
 # Clean up: remove the temporary file
 file.remove(temp_file)
+}
 }

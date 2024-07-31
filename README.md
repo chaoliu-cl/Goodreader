@@ -1,6 +1,6 @@
 
 <figure>
-<img src="man/images/logo.png"
+<img src="man/figures/logo.png"
 alt="Goodreader: Scrape and Analyze Goodreads Book Data" />
 <figcaption aria-hidden="true">Goodreader: Scrape and Analyze Goodreads
 Book Data</figcaption>
@@ -37,6 +37,3 @@ scrape_books(book_ids_path = "AI_books.txt")
 #Scrape book reviews
 scrape_reviews(book_ids_path = "AI_books.txt", num_reviews = 10)
 ```
-
-See the [quick start guide](/vignettes/Intro_to_Goodreader.Rmd) for more
-information on how to use **Goodreader**.

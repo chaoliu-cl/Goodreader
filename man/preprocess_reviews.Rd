@@ -19,6 +19,7 @@ This function preprocesses the review text by optionally filtering non-English r
 removing punctuation, converting to lowercase, removing stopwords, and stemming.
 }
 \examples{
+\donttest{
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -34,4 +35,5 @@ print(preprocessed$dtm)
 
 # Clean up: remove the temporary file
 file.remove(temp_file)
+}
 }

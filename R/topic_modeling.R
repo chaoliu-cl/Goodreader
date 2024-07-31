@@ -10,6 +10,7 @@
 #' @import tm stringr cld2
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -25,6 +26,7 @@
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 preprocess_reviews <- function(reviews, english_only = TRUE) {
   if (english_only) {
     # Detect languages
@@ -77,6 +79,7 @@ preprocess_reviews <- function(reviews, english_only = TRUE) {
 #' @import topicmodels
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -95,6 +98,7 @@ preprocess_reviews <- function(reviews, english_only = TRUE) {
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 fit_lda <- function(dtm, k, method = "Gibbs") {
   lda_model <- LDA(dtm, k = k, method = method)
   lda_model
@@ -110,6 +114,7 @@ fit_lda <- function(dtm, k, method = "Gibbs") {
 #' @import topicmodels
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -128,6 +133,7 @@ fit_lda <- function(dtm, k, method = "Gibbs") {
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 top_terms <- function(lda_model, n = 10) {
   top_terms <- terms(lda_model, n)
   for (i in 1:ncol(top_terms)) {
@@ -151,6 +157,7 @@ top_terms <- function(lda_model, n = 10) {
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -166,6 +173,7 @@ top_terms <- function(lda_model, n = 10) {
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 model_topics <- function(reviews, num_topics = 3, num_terms = 10, english_only = TRUE) {
   preprocessed <- preprocess_reviews(reviews, english_only = english_only)
   lda_model <- fit_lda(preprocessed$dtm, k = num_topics)

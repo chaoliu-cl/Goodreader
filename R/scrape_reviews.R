@@ -14,22 +14,16 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
-#'
 #' # Run the function (with a small number of reviews to keep the example quick)
 #' reviews <- scrape_reviews(temp_file, num_reviews = 5, use_parallel = FALSE)
-#'
-#' # Display the first few rows of the result
-#' if (nrow(reviews) > 0) {
-#'   print(head(reviews))
-#' } else {
-#'   cat("No reviews found. This could be due to network issues or changes in the website structure.\n")
-#' }
-#'
+#' print(head(reviews))
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 scrape_reviews <- function(book_ids_path, num_reviews = 30, use_parallel = FALSE, num_cores = 4) {
   start_time <- Sys.time()
   script_name <- "scrape_goodreads_reviews"

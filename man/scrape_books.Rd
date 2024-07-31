@@ -20,20 +20,15 @@ A data frame containing scraped book details.
 This function scrapes details of books using their IDs from Goodreads.
 }
 \examples{
+\donttest{
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
 
 # Run the function (with a small delay to avoid overwhelming the server)
 result <- scrape_books(temp_file, use_parallel = FALSE)
-
-# Display the first few rows of the result
-if (nrow(result) > 0) {
-  print(head(result))
-} else {
-  cat("No results found. This could be due to network issues or changes in the website structure.\n")
-}
-
+print(head(result))
 # Clean up: remove the temporary file
 file.remove(temp_file)
+}
 }
