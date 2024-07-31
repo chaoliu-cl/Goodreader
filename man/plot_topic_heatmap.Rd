@@ -13,6 +13,7 @@ plot_topic_heatmap(model_output)
 This function creates a heatmap of the topic distribution across documents.
 }
 \examples{
+\donttest{
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -28,4 +29,5 @@ plot_topic_heatmap(topic_results)
 
 # Clean up: remove the temporary file
 file.remove(temp_file)
+}
 }

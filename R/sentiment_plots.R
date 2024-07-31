@@ -10,6 +10,7 @@
 #' @importFrom rlang sym !!
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -36,6 +37,7 @@
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 sentiment_histogram <- function(sentiment_df) {
   ggplot2::ggplot(sentiment_df, ggplot2::aes(x = !!rlang::sym("sentiment_score"))) +
     ggplot2::geom_histogram(binwidth = 1, fill = "skyblue", color = "black") +
@@ -59,6 +61,7 @@ sentiment_histogram <- function(sentiment_df) {
 #' @importFrom rlang sym !!
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -85,6 +88,7 @@ sentiment_histogram <- function(sentiment_df) {
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 sentiment_trend <- function(sentiment_df, time_period = "month", show_smooth_trend = FALSE) {
   # Convert review_date to Date type, handling the "Month Day, Year" format
   sentiment_df <- sentiment_df %>%

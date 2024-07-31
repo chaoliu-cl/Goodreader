@@ -20,17 +20,9 @@ the rating distribution for each book.
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
-
 # Run the function
 rating_distributions <- get_rating_distribution(temp_file)
-
-# Display the results
-if (length(rating_distributions) > 0) {
-  print(rating_distributions)
-} else {
-  cat("No rating distributions found. This could be due to network issues or changes in the website structure.\n")
-}
-
+print(rating_distributions)
 # Clean up: remove the temporary file
 file.remove(temp_file)
 }

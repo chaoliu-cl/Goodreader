@@ -24,6 +24,7 @@ replace_special_chars <- function(x) {
 #' @importFrom rlang .data !!
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -39,6 +40,7 @@ replace_special_chars <- function(x) {
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 plot_topic_terms <- function(model_output, n = 10) {
   lda_model <- model_output$model
 
@@ -76,6 +78,7 @@ plot_topic_terms <- function(model_output, n = 10) {
 #' @importFrom rlang .data
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -91,6 +94,7 @@ plot_topic_terms <- function(model_output, n = 10) {
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 plot_topic_heatmap <- function(model_output) {
   lda_model <- model_output$model
   filtered_reviews <- model_output$filtered_reviews
@@ -125,6 +129,7 @@ plot_topic_heatmap <- function(model_output) {
 #' @importFrom rlang .data
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -140,6 +145,7 @@ plot_topic_heatmap <- function(model_output) {
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 plot_topic_prevalence <- function(model_output) {
   lda_model <- model_output$model
 
@@ -168,6 +174,7 @@ plot_topic_prevalence <- function(model_output) {
 #' @importFrom dplyr bind_rows
 #' @export
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -188,6 +195,7 @@ plot_topic_prevalence <- function(model_output) {
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 gen_topic_clouds <- function(model_output, n = 50) {
   lda_model <- model_output$model
 

@@ -15,6 +15,7 @@ plot_topic_terms(model_output, n = 10)
 This function creates a bar plot of the top terms for each topic.
 }
 \examples{
+\donttest{
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -30,4 +31,5 @@ plot_topic_terms(topic_results, n = 5)
 
 # Clean up: remove the temporary file
 file.remove(temp_file)
+}
 }

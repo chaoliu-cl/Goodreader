@@ -2,8 +2,8 @@
 title: "Goodreader Quick Start Guide"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Introdution to Goodreader Package}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Goodreader Quick Start Guide}
+  %\VignetteEngine{knitr::knitr}
   %\VignetteEncoding{UTF-8}
 ---
 
@@ -13,20 +13,21 @@ knitr::opts_chunk$set(
   comment = "#>",
   warning = FALSE, 
   message = FALSE,
-  out.width='\\textwidth', fig.height = 4, fig.width = 5, fig.align='center'
+  out.width='\\textwidth', fig.height = 4, fig.width = 5, fig.align='center',
+  fig.path = "/man/figures/"
 )
 
 ```
 
-# Installing the package
+## Installing and loading the package
 
-Since **Goodreader** is available on [CRAN](https://CRAN.R-project.org/package=), you can install it by:
+Install the package:
 
 ```{r, eval = FALSE}
 install.packages("Goodreader")
 ```
 
-And load the package
+And load the package:
 
 ```{r}
 library(Goodreader)
@@ -108,14 +109,20 @@ summary(ave_sentiment)
 
 The sentiment scores can be plotted as a histogram: 
 
-```{r}
+```{rr eval=FALSE}
 sentiment_histogram(sentiment_results)
+```
+```{r echo=FALSE, out.width='400px'}
+knitr::include_graphics('../man/figures/sentiment_hist.png')
 ```
 
 Or a trend of average sentiment score over time:
 
-```{r}
+```{r eval=FALSE}
 sentiment_trend(sentiment_results, time_period = "year")
+```
+```{r echo=FALSE, out.width='400px'}
+knitr::include_graphics('../man/figures/sentiment_trend.png')
 ```
 
 ## Perform topic modeling
@@ -126,8 +133,11 @@ reviews_topic <- model_topics(parent_bookreviews, num_topics = 3, num_terms = 10
 ```
 
 Plot the top terms by topic:
-```{r}
+```{r eval=FALSE}
 plot_topic_terms(reviews_topic)
+```
+```{r echo=FALSE, out.width='400px'}
+knitr::include_graphics('../man/figures/topic_terms.png')
 ```
 
 Create a word cloud for each topic:
@@ -137,17 +147,17 @@ gen_topic_clouds(reviews_topic)
 
 Topic 1:
 ```{r echo=FALSE, out.width='400px'}
-knitr::include_graphics('../vignettes/Topic1.png')
+knitr::include_graphics('../man/figures/Topic1.png')
 ```
 
 Topic 2:
 ```{r echo=FALSE, out.width='400px'}
-knitr::include_graphics('../vignettes/Topic2.png')
+knitr::include_graphics('../man/figures/Topic2.png')
 ```
 
 Topic 3:
 ```{r echo=FALSE, out.width='400px'}
-knitr::include_graphics('../vignettes/Topic3.png')
+knitr::include_graphics('../man/figures/Topic3.png')
 ```
 
 
@@ -157,10 +167,8 @@ The following table shows other utility functions to extract book-related inform
 
 ```{r echo=FALSE} 
 library(dplyr)
-library(flextable)
 data.frame(Function = c("get_book_ids()", "get_book_summary()", "get_author_info()", "get_genres()", "get_published_time()", "get_num_pages()", "get_format_info()", "get_rating_distribution()"), 
-           Output = c("Text file",  "List", "List", "List", "List", "List", "List", "List"),	
+           Output = c("Text file",  "List", "List", "List", "List", "List", "List", "List"),    
            Description = c("Retrieve the book IDs from the input data and save to a text file ", "Retrieve the summary for each book", "Retrieve the author information for each book", "Extract the genres for each book", "Retrieve the published time for each book", "Retrieve the number of pages for each book", "Retrieve the format information for each book", "Retrieve the rating distribution for each book")) %>%
-  flextable() %>% 
-  theme_zebra()
+  knitr::kable() 
 ```
