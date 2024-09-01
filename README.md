@@ -1,6 +1,6 @@
 
 <figure>
-<img src="man/figures/Goodreader.png" 
+<img src="man/figures/Goodreader.png"
 alt="Goodreader: Scrape and Analyze Goodreads Book Data" />
 <figcaption aria-hidden="true">Goodreader: Scrape and Analyze Goodreads
 Book Data</figcaption>
