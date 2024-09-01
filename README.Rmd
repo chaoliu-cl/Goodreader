@@ -7,7 +7,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   warning = FALSE,
   comment = "#>",
-  fig.path = "man/images/",
+  fig.path = "man/figures/Goodreader.png",
   out.width = "100%"
 )
 ```
