@@ -17,6 +17,11 @@ test_that("Goodreads scraping functions work correctly", {
   # and rely on the structure of an external website (Goodreads) which may change.
   skip_on_cran()
 
+  # Skip long-running tests if the environment variable is set
+  if (Sys.getenv("SKIP_LONG_TESTS") == "true") {
+    skip("Skipping long-running tests")
+  }
+
   # Test get_book_ids function
   test_that("get_book_ids creates a file", {
     get_book_ids(sample_books, "test_book_ids_output.txt")

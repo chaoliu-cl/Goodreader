@@ -12,7 +12,7 @@ get_book_ids(input_data, file_name)
 \item{file_name}{A string specifying the name of the text file to save the book_id values.}
 }
 \value{
-None. The function writes the book_id values to a text file.
+No return value, the function writes the book_id values to a text file.
 }
 \description{
 This function retrieves the book_id values from the input_data and saves them to a specified text file.

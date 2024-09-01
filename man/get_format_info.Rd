@@ -17,12 +17,16 @@ This function takes a file path containing Goodreads book IDs and retrieves
 the format information for each book.
 }
 \examples{
+\donttest{
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
+
 # Run the function
 format_info <- get_format_info(temp_file)
 print(format_info)
+
 # Clean up: remove the temporary file
 file.remove(temp_file)
+}
 }

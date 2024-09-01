@@ -17,6 +17,7 @@ This function takes a file path containing Goodreads book IDs and retrieves
 the number of pages for each book.
 }
 \examples{
+\donttest{
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -25,4 +26,5 @@ num_pages <- get_num_pages(temp_file)
 print(num_pages)
 # Clean up: remove the temporary file
 file.remove(temp_file)
+}
 }

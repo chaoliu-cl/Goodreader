@@ -9,6 +9,9 @@ plot_topic_heatmap(model_output)
 \arguments{
 \item{model_output}{The output from model_topics function}
 }
+\value{
+A ggplot object representing the topic distribution heatmap.
+}
 \description{
 This function creates a heatmap of the topic distribution across documents.
 }

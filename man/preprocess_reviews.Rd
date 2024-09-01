@@ -12,7 +12,12 @@ preprocess_reviews(reviews, english_only = TRUE)
 \item{english_only}{A logical value indicating whether to filter out non-English reviews. Default is TRUE}
 }
 \value{
-A list containing the preprocessed texts, the document-term matrix, and the filtered reviews data frame
+A list containing the following elements:
+\itemize{
+\item \code{corpus}: The preprocessed corpus object.
+\item \code{dtm}: The document-term matrix.
+\item \code{filtered_reviews}: The filtered reviews data frame.
+}
 }
 \description{
 This function preprocesses the review text by optionally filtering non-English reviews,

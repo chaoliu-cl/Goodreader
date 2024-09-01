@@ -9,6 +9,9 @@ plot_topic_prevalence(model_output)
 \arguments{
 \item{model_output}{The output from model_topics function}
 }
+\value{
+A ggplot object representing the bar plot of topic prevalence.
+}
 \description{
 This function creates a bar plot of the overall prevalence of each topic.
 }

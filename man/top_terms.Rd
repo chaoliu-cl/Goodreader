@@ -4,15 +4,20 @@
 \alias{top_terms}
 \title{Extract and print top terms for each topic}
 \usage{
-top_terms(lda_model, n = 10)
+top_terms(lda_model, n = 10, verbose = TRUE)
 }
 \arguments{
 \item{lda_model}{An LDA model}
 
 \item{n}{The number of top terms to extract for each topic}
+
+\item{verbose}{Logical; if TRUE, print the top terms to the console (default is TRUE)}
+}
+\value{
+A list of character vectors, each containing the top terms for a topic.
 }
 \description{
-This function extracts and prints the top terms for each topic in the LDA model.
+This function extracts the top terms for each topic in the LDA model and optionally prints them.
 }
 \examples{
 \donttest{

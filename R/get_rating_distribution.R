@@ -11,14 +11,18 @@
 #' @importFrom rlang .data
 #' @importFrom stats setNames
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
+#'
 #' # Run the function
 #' rating_distributions <- get_rating_distribution(temp_file)
 #' print(rating_distributions)
+#'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 get_rating_distribution <- function(file_path) {
   read_book_ids <- function(file_path) {
     book_ids <- readLines(file_path)

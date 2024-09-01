@@ -9,6 +9,7 @@
 #' @export
 #' @importFrom rvest read_html html_node html_nodes html_text
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -17,14 +18,11 @@
 #' genres <- get_genres(temp_file)
 #'
 #' # Display the results
-#' if (length(genres) > 0) {
-#'   print(genres)
-#' } else {
-#'   cat("No genres found. This could be due to network issues or changes in the website structure.\n")
-#' }
+#' print(genres)
 #'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 
 get_genres <- function(file_path) {
   # Read book IDs from the file

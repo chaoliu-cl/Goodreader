@@ -15,6 +15,13 @@ model_topics(reviews, num_topics = 3, num_terms = 10, english_only = TRUE)
 
 \item{english_only}{A logical value indicating whether to filter out non-English reviews. Default is FALSE.}
 }
+\value{
+A list containing the following elements:
+\itemize{
+\item \code{model}: The fitted LDA model object.
+\item \code{filtered_reviews}: The preprocessed and filtered reviews data frame.
+}
+}
 \description{
 This function takes the output from scrape_reviews, preprocesses the data,
 performs topic modeling, and prints the results.

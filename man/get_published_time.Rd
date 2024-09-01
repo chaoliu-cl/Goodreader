@@ -17,6 +17,7 @@ This function takes a file path containing Goodreads book IDs and retrieves
 the published time for each book.
 }
 \examples{
+\donttest{
 # Create a temporary file with sample book IDs
 temp_file <- tempfile(fileext = ".txt")
 writeLines(c("1420", "2767052", "10210"), temp_file)
@@ -25,4 +26,5 @@ published_times <- get_published_time(temp_file)
 print(published_times)
 # Clean up: remove the temporary file
 file.remove(temp_file)
+}
 }

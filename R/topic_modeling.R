@@ -5,7 +5,10 @@
 #'
 #' @param reviews A data frame containing the scraped reviews
 #' @param english_only A logical value indicating whether to filter out non-English reviews. Default is TRUE
-#' @return A list containing the preprocessed texts, the document-term matrix, and the filtered reviews data frame
+#' @return A list containing the following elements:
+#'   - `corpus`: The preprocessed corpus object.
+#'   - `dtm`: The document-term matrix.
+#'   - `filtered_reviews`: The filtered reviews data frame.
 #'
 #' @import tm stringr cld2
 #' @export
@@ -106,10 +109,13 @@ fit_lda <- function(dtm, k, method = "Gibbs") {
 
 #' Extract and print top terms for each topic
 #'
-#' This function extracts and prints the top terms for each topic in the LDA model.
+#' This function extracts the top terms for each topic in the LDA model and optionally prints them.
 #'
 #' @param lda_model An LDA model
 #' @param n The number of top terms to extract for each topic
+#' @param verbose Logical; if TRUE, print the top terms to the console (default is TRUE)
+#'
+#' @return A list of character vectors, each containing the top terms for a topic.
 #'
 #' @import topicmodels
 #' @export
@@ -134,13 +140,21 @@ fit_lda <- function(dtm, k, method = "Gibbs") {
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
 #' }
-top_terms <- function(lda_model, n = 10) {
+top_terms <- function(lda_model, n = 10, verbose = TRUE) {
   top_terms <- terms(lda_model, n)
+  result <- vector("list", ncol(top_terms))
+
   for (i in 1:ncol(top_terms)) {
-    cat(paste0("Topic ", i, ": "))
-    cat(paste(top_terms[,i], collapse = ", "))
-    cat("\n\n")
+    result[[i]] <- top_terms[,i]
+    if(verbose) {
+      cat(paste0("Topic ", i, ": "), "\n")
+      cat(paste(result[[i]], collapse = ", "), "\n")
+      cat("\n")
+    }
   }
+
+  names(result) <- paste0("Topic_", 1:ncol(top_terms))
+  return(result)
 }
 
 #' Analyze topics in Goodreads reviews
@@ -152,6 +166,10 @@ top_terms <- function(lda_model, n = 10) {
 #' @param num_topics The number of topics to extract
 #' @param num_terms The number of top terms to display for each topic
 #' @param english_only A logical value indicating whether to filter out non-English reviews. Default is FALSE.
+#'
+#' @return A list containing the following elements:
+#'   - `model`: The fitted LDA model object.
+#'   - `filtered_reviews`: The preprocessed and filtered reviews data frame.
 #'
 #' @import tm topicmodels cld2
 #' @export

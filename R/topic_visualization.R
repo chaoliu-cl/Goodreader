@@ -18,6 +18,8 @@ replace_special_chars <- function(x) {
 #' @param model_output The output from model_topics function
 #' @param n The number of top terms to visualize for each topic
 #'
+#' @return A ggplot object representing the bar plot of top terms for each topic.
+#'
 #' @importFrom ggplot2 ggplot aes geom_col facet_wrap coord_flip labs theme_minimal theme element_text
 #' @importFrom dplyr mutate
 #' @importFrom tidyr pivot_longer
@@ -72,6 +74,8 @@ plot_topic_terms <- function(model_output, n = 10) {
 #'
 #' @param model_output The output from model_topics function
 #'
+#' @return A ggplot object representing the topic distribution heatmap.
+#'
 #' @importFrom ggplot2 ggplot aes geom_tile scale_fill_gradient labs theme_minimal theme element_blank
 #' @importFrom tidyr pivot_longer
 #' @importFrom dplyr mutate
@@ -124,6 +128,8 @@ plot_topic_heatmap <- function(model_output) {
 #'
 #' @param model_output The output from model_topics function
 #'
+#' @return A ggplot object representing the bar plot of topic prevalence.
+#'
 #' @importFrom ggplot2 ggplot aes geom_col labs theme_minimal theme
 #' @importFrom dplyr mutate
 #' @importFrom rlang .data
@@ -169,6 +175,8 @@ plot_topic_prevalence <- function(model_output) {
 #'
 #' @param model_output The output from model_topics function
 #' @param n The number of top terms to include in the word cloud
+#'
+#' @return A list of ggplot objects, where each element represents a word cloud for a topic.
 #'
 #' @importFrom wordcloud2 wordcloud2
 #' @importFrom dplyr bind_rows

@@ -11,6 +11,9 @@ gen_topic_clouds(model_output, n = 50)
 
 \item{n}{The number of top terms to include in the word cloud}
 }
+\value{
+A list of ggplot objects, where each element represents a word cloud for a topic.
+}
 \description{
 This function creates a word cloud for each topic.
 }

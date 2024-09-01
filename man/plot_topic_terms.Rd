@@ -11,6 +11,9 @@ plot_topic_terms(model_output, n = 10)
 
 \item{n}{The number of top terms to visualize for each topic}
 }
+\value{
+A ggplot object representing the bar plot of top terms for each topic.
+}
 \description{
 This function creates a bar plot of the top terms for each topic.
 }

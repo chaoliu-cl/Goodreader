@@ -4,7 +4,7 @@
 #'
 #' @param input_data A data frame containing a column named book_id.
 #' @param file_name A string specifying the name of the text file to save the book_id values.
-#' @return None. The function writes the book_id values to a text file.
+#' @return No return value, the function writes the book_id values to a text file.
 #' @export
 #' @examples
 #' # Create sample data
@@ -28,5 +28,5 @@ get_book_ids <- function(input_data, file_name) {
   # Write the book_id values to a text file
   writeLines(book_ids, file_name)
 
-  cat("Book IDs saved to", file_name, "\n")
+  message("Book IDs saved to ", file_name)
 }

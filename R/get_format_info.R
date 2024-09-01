@@ -8,14 +8,18 @@
 #' @export
 #' @importFrom rvest read_html html_nodes html_node html_text
 #' @examples
+#' \donttest{
 #' # Create a temporary file with sample book IDs
 #' temp_file <- tempfile(fileext = ".txt")
 #' writeLines(c("1420", "2767052", "10210"), temp_file)
+#'
 #' # Run the function
 #' format_info <- get_format_info(temp_file)
 #' print(format_info)
+#'
 #' # Clean up: remove the temporary file
 #' file.remove(temp_file)
+#' }
 get_format_info <- function(file_path) {
   read_book_ids <- function(file_path) {
     book_ids <- readLines(file_path)
