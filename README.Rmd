@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-![Goodreader: Scrape and Analyze Goodreads Book Data](man/figures/logo.png)
+![Goodreader: Scrape and Analyze Goodreads Book Data](man/figures/Goodreader.png)
 
 # Goodreader
 
