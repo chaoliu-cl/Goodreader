@@ -12,5 +12,5 @@ Imports: cld2, dplyr, ggplot2, httr, lubridate, magrittr, parallel, purrr, rvest
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0), withr
 Config/testthat/edition: 3
 VignetteBuilder: knitr
-URL: https://github.com/chaoliu-cl/Goodreader
+URL: https://github.com/chaoliu-cl/Goodreader, http://liu-chao.site/Goodreader/
 BugReports: https://github.com/chaoliu-cl/Goodreader/issues
