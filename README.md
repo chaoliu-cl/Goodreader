@@ -1,5 +1,5 @@
 
-# Goodreader <a href="https://github.com/chaoliu-cl/Goodreader"><img src="man/figures/Goodreader.png" alt="Goodreader website" align="right" height="138"/></a>  
+# Goodreader <img src="man/figures/Goodreader.png" align="right" height="139" />
 
 Goodreader is a comprehensive toolkit for scraping and analyzing book
 data from Goodreads.
