@@ -11,13 +11,15 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# Goodreader <img src="man/figures/Goodreader.png" align="right" height="139" />
+
+# Goodreader <img src="man/figures/Goodreader.png" align="right" height="139" alt="logo" style="float:right; height:139px;"/>
 
 Goodreader is a comprehensive toolkit for scraping and analyzing book data from Goodreads. 
 
 ## Installation
 
 From CRAN:
+
 ```{r eval = FALSE}
 install.packages("Goodreader") 
 ``` 
@@ -40,4 +42,3 @@ scrape_books(book_ids_path = "AI_books.txt")
 #Scrape book reviews
 scrape_reviews(book_ids_path = "AI_books.txt", num_reviews = 10)
 ```
-

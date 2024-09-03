@@ -1,5 +1,5 @@
 
-# Goodreader <img src="man/figures/Goodreader.png" align="right" height="139" />
+# Goodreader <img src="man/figures/Goodreader.png" align="right" height="139" alt="logo" style="float:right; height:139px;"/>
 
 Goodreader is a comprehensive toolkit for scraping and analyzing book
 data from Goodreads.
