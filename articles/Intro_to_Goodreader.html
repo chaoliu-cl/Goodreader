@@ -145,15 +145,16 @@ average sentiment score for each book.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ave_sentiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/average_book_sentiment.html">average_book_sentiment</a></span><span class="op">(</span><span class="va">sentiment_results</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">ave_sentiment</span><span class="op">)</span></span>
-<span><span class="co">#&gt;    book_id          avg_sentiment  </span></span>
-<span><span class="co">#&gt;  Length:10          Min.   : 4.40  </span></span>
-<span><span class="co">#&gt;  Class :character   1st Qu.: 7.25  </span></span>
-<span><span class="co">#&gt;  Mode  :character   Median :12.86  </span></span>
-<span><span class="co">#&gt;                     Mean   :12.95  </span></span>
-<span><span class="co">#&gt;                     3rd Qu.:14.65  </span></span>
-<span><span class="co">#&gt;                     Max.   :27.30</span></span></code></pre></div>
+<span><span class="co">##    book_id          avg_sentiment  </span></span>
+<span><span class="co">##  Length:10          Min.   : 4.40  </span></span>
+<span><span class="co">##  Class :character   1st Qu.: 7.25  </span></span>
+<span><span class="co">##  Mode  :character   Median :12.86  </span></span>
+<span><span class="co">##                     Mean   :12.95  </span></span>
+<span><span class="co">##                     3rd Qu.:14.65  </span></span>
+<span><span class="co">##                     Max.   :27.30</span></span></code></pre></div>
 <p>The sentiment scores can be plotted as a histogram:</p>
-<pre class="rr"><code><span><span class="fu"><a href="../reference/sentiment_histogram.html">sentiment_histogram</a></span><span class="op">(</span><span class="va">sentiment_results</span><span class="op">)</span></span></code></pre>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/sentiment_histogram.html">sentiment_histogram</a></span><span class="op">(</span><span class="va">sentiment_results</span><span class="op">)</span></span></code></pre></div>
 <p><img src="../reference/figures/sentiment_hist.png" width="400px" style="display: block; margin: auto;"></p>
 <p>Or a trend of average sentiment score over time:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
@@ -166,14 +167,14 @@ average sentiment score for each book.</p>
 <p>Apply topic modeling to the reviews data:</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">reviews_topic</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/model_topics.html">model_topics</a></span><span class="op">(</span><span class="va">parent_bookreviews</span>, num_topics <span class="op">=</span> <span class="fl">3</span>, num_terms <span class="op">=</span> <span class="fl">10</span>, english_only <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Topic 1:  </span></span>
-<span><span class="co">#&gt; child, parent, children, emot, help, feel, can, book, also, use </span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Topic 2:  </span></span>
-<span><span class="co">#&gt; kid, think, book, just, read, time, realli, will, make, lot </span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Topic 3:  </span></span>
-<span><span class="co">#&gt; parent, book, like, one, need, children, good, dont, author, way</span></span></code></pre></div>
+<span><span class="co">## Topic 1:  </span></span>
+<span><span class="co">## parent, children, need, one, way, good, get, work, dont, give </span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Topic 2:  </span></span>
+<span><span class="co">## parent, child, book, emot, feel, help, also, can, children, use </span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Topic 3:  </span></span>
+<span><span class="co">## book, just, kid, think, read, like, time, say, realli, much</span></span></code></pre></div>
 <p>Plot the top terms by topic:</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_topic_terms.html">plot_topic_terms</a></span><span class="op">(</span><span class="va">reviews_topic</span><span class="op">)</span></span></code></pre></div>

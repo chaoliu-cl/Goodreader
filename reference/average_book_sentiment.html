@@ -69,11 +69,9 @@
 <span class="r-in"><span><span class="co"># Run the scrape_reviews function</span></span></span>
 <span class="r-in"><span><span class="va">reviews</span> <span class="op">&lt;-</span> <span class="fu"><a href="scrape_reviews.html">scrape_reviews</a></span><span class="op">(</span><span class="va">temp_file</span>, num_reviews <span class="op">=</span> <span class="fl">5</span>, use_parallel <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total book IDs to process: 3</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Internal Server Error (HTTP 500).</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Error processing book ID 10210: Internal Server Error (HTTP 500).</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 2024-10-25 02:55:20.948305 scrape_goodreads_reviews: Completed! All book reviews extracted</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Scraping run time = 16.2494404315948</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Total books processed: 2</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 2024-10-25 03:00:49.907424 scrape_goodreads_reviews: Completed! All book reviews extracted</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Scraping run time = 7.80114316940308</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Total books processed: 3</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Check if reviews were successfully scraped</span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">reviews</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span></span>
@@ -88,11 +86,12 @@
 <span class="r-in"><span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"No reviews found. Cannot calculate average sentiment.\n"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 2 × 2</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 2</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   book_id avg_sentiment</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 1420            -<span style="color: #BB0000;">72.7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2767052          23.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 10210            55.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 1420            -<span style="color: #BB0000;">72.7</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 2767052          23.2</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Clean up: remove the temporary file</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="va">temp_file</span><span class="op">)</span></span></span>
