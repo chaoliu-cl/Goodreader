@@ -13,8 +13,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   warning = FALSE, 
   message = FALSE,
-  out.width='\\textwidth', fig.height = 4, fig.width = 5, fig.align='center',
-  fig.path = "/man/figures/"
+  out.width='\\textwidth', fig.height = 4, fig.width = 5, fig.align='center'
 )
 
 ```
@@ -38,7 +37,7 @@ library(Goodreader)
 The `search_goodreads()` function allows you to search for books on Goodreads based on various criteria.
 
 The code below searches for books that include the term “parenting” in the title and returned 10 books sorted by readers’ ratings
-```{r}
+```{r, eval = FALSE}
 parent_df <- search_goodreads(search_term = "parenting", search_in = "title", num_books = 10, sort_by = "ratings")
 ```
 
@@ -74,13 +73,13 @@ search_goodreads(search_term = "J.K. Rowling", search_in = "author", num_books =
 
 After the books are found, save their IDs to a text file. These IDs are used for extracting book metadata and reviews:
 
-```{r}
+```{r, eval = FALSE}
 get_book_ids(input_data = parent_df, file_name = "parent_books.txt") #the book IDs are now stored in a text file named “parent_books”
 ```
 
 Book metadata can then be scraped:
 
-```{r}
+```{r, eval = FALSE}
 parent_bookinfo <- scrape_books(book_ids_path = "parent_books.txt", use_parallel = FALSE)
 ```
 
@@ -88,7 +87,7 @@ To speed up the scraping process:
 *Turn on the parallel process: `use_parallel = TRUE` 
 *Specify the number of cores for the parallel process (e.g., `num_cores = 8)
 
-```{r}
+```{r, eval = FALSE}
 parent_bookreviews <- scrape_reviews(book_ids_path = "parent_books.txt", num_reviews = 10, use_parallel = FALSE) #users can also turn on parallel process to speed up the process
 ```
 
@@ -96,20 +95,27 @@ parent_bookreviews <- scrape_reviews(book_ids_path = "parent_books.txt", num_rev
 
 The `analyze_sentiment()` function calculates the sentiment score of each review based on the lexicon chosen by the user. Available options for lexicon are `afinn`, `bing`, and `nrc`. Basic negation scope detection was implemented (e.g., not happy is labeled as negative emotion and is assigned with a negative score).
 
-```{r}
+```{r, eval = FALSE}
 sentiment_results <- analyze_sentiment(parent_bookreviews, lexicon = "afinn")
 ```
 
 The `average_book_sentiment()` function calculates the average sentiment score for each book.
 
-```{r}
+```{r, eval = FALSE}
 ave_sentiment <- average_book_sentiment(sentiment_results)
 summary(ave_sentiment)
+##    book_id          avg_sentiment  
+##  Length:10          Min.   : 4.40  
+##  Class :character   1st Qu.: 7.25  
+##  Mode  :character   Median :12.86  
+##                     Mean   :12.95  
+##                     3rd Qu.:14.65  
+##                     Max.   :27.30
 ```
 
 The sentiment scores can be plotted as a histogram: 
 
-```{rr eval=FALSE}
+```{r, eval=FALSE}
 sentiment_histogram(sentiment_results)
 ```
 ```{r echo=FALSE, out.width='400px'}
@@ -118,7 +124,7 @@ knitr::include_graphics('../man/figures/sentiment_hist.png')
 
 Or a trend of average sentiment score over time:
 
-```{r eval=FALSE}
+```{r, eval=FALSE}
 sentiment_trend(sentiment_results, time_period = "year")
 ```
 ```{r echo=FALSE, out.width='400px'}
@@ -128,12 +134,20 @@ knitr::include_graphics('../man/figures/sentiment_trend.png')
 ## Perform topic modeling
 
 Apply topic modeling to the reviews data:
-```{r}
+```{r, eval = FALSE}
 reviews_topic <- model_topics(parent_bookreviews, num_topics = 3, num_terms = 10, english_only = TRUE)
+## Topic 1:  
+## parent, children, need, one, way, good, get, work, dont, give 
+## 
+## Topic 2:  
+## parent, child, book, emot, feel, help, also, can, children, use 
+## 
+## Topic 3:  
+## book, just, kid, think, read, like, time, say, realli, much
 ```
 
 Plot the top terms by topic:
-```{r eval=FALSE}
+```{r, eval=FALSE}
 plot_topic_terms(reviews_topic)
 ```
 ```{r echo=FALSE, out.width='400px'}
@@ -141,7 +155,7 @@ knitr::include_graphics('../man/figures/topic_terms.png')
 ```
 
 Create a word cloud for each topic:
-```{r eval=FALSE}
+```{r, eval=FALSE}
 gen_topic_clouds(reviews_topic)
 ```
 

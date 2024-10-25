@@ -2,6 +2,6 @@
 
 0 errors | 0 warnings | 1 note
 
-## New submission
+## Submission with a bug fix
 
-*This is a new submission of the Goodreader package (Version: 0.1.1). In this version, I have corrected my name in the DESCRIPTION file.
+*This is a resubmission of the Goodreader package (Version: 0.1.2). In this version, I have fixed the error in building the vignette.
