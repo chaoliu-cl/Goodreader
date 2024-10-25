@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">Goodreader</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,20 +73,20 @@
 <span class="r-in"><span><span class="co"># Scrape reviews</span></span></span>
 <span class="r-in"><span><span class="va">reviews</span> <span class="op">&lt;-</span> <span class="fu"><a href="scrape_reviews.html">scrape_reviews</a></span><span class="op">(</span><span class="va">temp_file</span>, num_reviews <span class="op">=</span> <span class="fl">30</span>, use_parallel <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total book IDs to process: 3</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 2024-09-03 16:15:45.295685 scrape_goodreads_reviews: Completed! All book reviews extracted</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Scraping run time = 6.78074383735657</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 2024-10-25 02:55:36.081346 scrape_goodreads_reviews: Completed! All book reviews extracted</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Scraping run time = 7.18185758590698</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total books processed: 3</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Model topics</span></span></span>
 <span class="r-in"><span><span class="va">topic_results</span> <span class="op">&lt;-</span> <span class="fu"><a href="model_topics.html">model_topics</a></span><span class="op">(</span><span class="va">reviews</span>, num_topics <span class="op">=</span> <span class="fl">3</span>, num_terms <span class="op">=</span> <span class="fl">50</span>, english_only <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Topic 1:  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> book, like, katniss, one, will, think, just, can, read, game, peopl, ’s, also, see, get, make, way, stori, first, never, mani, hunger, want, peeta, even, much, thing, time, now, say, still, live, love, take, ever, review, come, littl, charact, start, girl, person, thought, someth, ’m, world, district, show, realli, two </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> hamlet, play, charact, fuck, know, make, shakespear, one, claudius, seem, year, scene, great, right, father, may, action, princ, thought, act, man, ophelia, young, mother, take, becom, mad, brother, friend, also, horatio, consid, come, yet, noth, question, made, old, didnt, gertrud, look, work, good, word, refer, watch, die, ghost, king, that </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Topic 2:  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> jane, love, life, rochest, stori, eyr, time, reader, much, world, make, woman, women, bront, book, feel, beauti, word, though, natur, everi, say, novel, write, cours, men, right, marri, john, let, way, might, school, take, god, independ, differ, truli, wife, even, need, young, friend, point, classic, heart, first, eye, charlott, later </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> book, like, read, katniss, one, just, can, game, will, think, peopl, get, way, ’s, see, also, want, make, thing, love, feel, say, realli, stori, hunger, peeta, never, first, now, still, take, world, littl, need, review, mani, live, give, person, start, girl, even, charact, end, though, district, better, much, ’m, time </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Topic 3:  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> hamlet, know, read, play, charact, one, fuck, year, seem, well, love, shakespear, claudius, plot, great, man, scene, work, find, good, reason, time, feel, realli, fact, –, princ, act, must, yes, probabl, end, get, right, idea, rather, away, ophelia, everi, real, just, look, age, chang, horatio, old, moment, mad, matter, die </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> jane, love, time, rochest, stori, eyr, much, book, reader, away, woman, women, bront, life, fact, novel, school, read, natur, first, power, even, men, john, write, might, cours, man, matter, world, god, wife, independ, ever, reread, day, classic, age, home, word, alway, possibl, element, poor, everi, male, suppos, short, marriag, heroin </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Generate word clouds for each topic</span></span></span>
@@ -112,7 +112,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>

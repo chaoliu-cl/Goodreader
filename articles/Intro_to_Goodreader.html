@@ -26,7 +26,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">Goodreader</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -167,13 +167,13 @@ average sentiment score for each book.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">reviews_topic</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/model_topics.html">model_topics</a></span><span class="op">(</span><span class="va">parent_bookreviews</span>, num_topics <span class="op">=</span> <span class="fl">3</span>, num_terms <span class="op">=</span> <span class="fl">10</span>, english_only <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Topic 1:  </span></span>
-<span><span class="co">#&gt; child, emot, children, feel, help, famili, work, can, time, like </span></span>
+<span><span class="co">#&gt; child, parent, children, emot, help, feel, can, book, also, use </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Topic 2:  </span></span>
-<span><span class="co">#&gt; parent, book, kid, read, just, think, say, dont, mani, want </span></span>
+<span><span class="co">#&gt; kid, think, book, just, read, time, realli, will, make, lot </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Topic 3:  </span></span>
-<span><span class="co">#&gt; book, parent, children, need, good, author, one, like, way, give</span></span></code></pre></div>
+<span><span class="co">#&gt; parent, book, like, one, need, children, good, dont, author, way</span></span></code></pre></div>
 <p>Plot the top terms by topic:</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_topic_terms.html">plot_topic_terms</a></span><span class="op">(</span><span class="va">reviews_topic</span><span class="op">)</span></span></code></pre></div>
@@ -260,7 +260,7 @@ text file</td>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>

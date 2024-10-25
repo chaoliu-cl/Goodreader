@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">Goodreader</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,8 +77,8 @@
 <span class="r-in"><span><span class="co"># Scrape reviews</span></span></span>
 <span class="r-in"><span><span class="va">reviews</span> <span class="op">&lt;-</span> <span class="fu"><a href="scrape_reviews.html">scrape_reviews</a></span><span class="op">(</span><span class="va">temp_file</span>, num_reviews <span class="op">=</span> <span class="fl">5</span>, use_parallel <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total book IDs to process: 3</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 2024-09-03 16:17:44.445879 scrape_goodreads_reviews: Completed! All book reviews extracted</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Scraping run time = 6.86547303199768</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 2024-10-25 02:57:33.432801 scrape_goodreads_reviews: Completed! All book reviews extracted</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Scraping run time = 7.01579213142395</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total books processed: 3</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Preprocess the reviews</span></span></span>
@@ -90,16 +90,16 @@
 <span class="r-in"><span><span class="co"># Print top terms</span></span></span>
 <span class="r-in"><span><span class="fu">top_terms</span><span class="op">(</span><span class="va">lda_model</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Topic 1:  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> love, jane, book, read, novel </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Topic 2:  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> fuck, hamlet, get, katniss, watch </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Topic 2:  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> jane, book, love, read, like </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $Topic_1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "love"  "jane"  "book"  "read"  "novel"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "fuck"    "hamlet"  "get"     "katniss" "watch"  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $Topic_2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "fuck"    "hamlet"  "get"     "katniss" "watch"  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "jane" "book" "love" "read" "like"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Clean up: remove the temporary file</span></span></span>
@@ -117,7 +117,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>
