@@ -1,5 +1,5 @@
 ---
-title: 'Leveraging Crowdsourced Reviews for Large-Scale Literary Analysis: The Goodreader R Package for Digital Humanities'
+title: 'Goodreader: An Open-Source R Package for Teaching Computational Text Analysis with Goodreads Reviews'
 tags:
   - computational text analysis
   - literary data analysis
