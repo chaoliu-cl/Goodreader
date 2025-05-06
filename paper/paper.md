@@ -7,9 +7,10 @@ tags:
   - educational data science
   - goodreads reviews
 authors:
-  - name: Chao Liu^[Corresponding Author]
+  - name: Chao Liu
     orcid: 0000-0002-9979-8272
     affiliation: 1
+    corresponding: true
 affiliations:
  - name: Cedarville University
    index: 1
@@ -27,9 +28,9 @@ By lowering the technical barriers to computational text analysis, *Goodreader* 
 
 # Statement of Need
 
-Computational approaches to text analysis are increasingly important in humanities and social science education, yet many students and educators face significant barriers to entry. Traditional literary analysis relies on close reading (Brooks, 1947; Byron, 2021), surveys (Busselle & Bilandzic, 2009; Miall & Kuiken, 1995), and small-scale content analysis (Filipović, 2018; Suico et al., 2023), while large-scale computational methods often demand extensive programming skills. This gap between theoretical understanding and practical application can hinder broader adoption of computational techniques in related fields. The Goodreader R package fills this gap by providing an accessible tool for retrieving and analyzing book reviews from Goodreads (https://www.goodreads.com/), the world's largest site for readers and book recommendations. By eliminating the need for advanced technical expertise, Goodreader enables educators and students to engage with real-world textual data in meaningful ways.
+Computational approaches to text analysis are increasingly important in humanities and social science education, yet many students and educators face significant barriers to entry. Traditional literary analysis relies on close reading [@Brooks1947; @Byron2021], surveys [@Busselle2009; @Miall1995], and small-scale content analysis [@Filipovic2018; @Suico2023], while large-scale computational methods often demand extensive programming skills. This gap between theoretical understanding and practical application can hinder broader adoption of computational techniques in related fields. The Goodreader R package fills this gap by providing an accessible tool for retrieving and analyzing book reviews from Goodreads ([https://www.goodreads.com/](https://www.goodreads.com/)), the world's largest site for readers and book recommendations. By eliminating the need for advanced technical expertise, Goodreader enables educators and students to engage with real-world textual data in meaningful ways.
 
-Additionally, existing text analysis tools primarily focus on general sentiment analysis or topic modeling, often without domain-specific applications relevant to literature and the social sciences. While platforms such as Twitter and news archives are commonly used for text mining exercises, few educational tools are tailored specifically for studying literary reception and public engagement with books. Goodreader addresses this limitation by offering structured functions for collecting, processing, and analyzing crowdsourced book reviews, and students could use these reviews to better understand reading preferences across different demographics (Thelwall & Kousha, 2017), assess the impact of book awards on reader reception (Peters, 2023), or explore the relationship between literary style and reader engagement (Koolen et al., 2022). Goodreader is particularly designed to support courses in digital humanities, data-driven literary studies, marketing research, and social science methodologies.
+Additionally, existing text analysis tools primarily focus on general sentiment analysis or topic modeling, often without domain-specific applications relevant to literature and the social sciences. While platforms such as Twitter and news archives are commonly used for text mining exercises, few educational tools are tailored specifically for studying literary reception and public engagement with books. Goodreader addresses this limitation by offering structured functions for collecting, processing, and analyzing crowdsourced book reviews, and students could use these reviews to better understand reading preferences across different demographics [@Thelwall2017], assess the impact of book awards on reader reception [@Peters2023], or explore the relationship between literary style and reader engagement [@Koolen2022]. Goodreader is particularly designed to support courses in digital humanities, data-driven literary studies, marketing research, and social science methodologies.
 
 In an educational setting, *Goodreader* can serve multiple purposes:
 
@@ -42,19 +43,17 @@ In an educational setting, *Goodreader* can serve multiple purposes:
 
 ## Uses and Functionality
 
-The *Goodreader* package collects book-related information from Goodreads without the need for API access. The package uses the rvest package (Wickham, 2024) to scrape data directly from Goodreads web pages, eliminating the need for API access. When a user provides search input, the package scans relevant book pages on Goodreads for targeted information. The collected data is then processed and returned as a user-friendly R data frame, which researchers can easily manipulate to suit their specific needs. Figure 1 illustrates the workflow of the *Goodreader* package.
+The *Goodreader* package collects book-related information from Goodreads without the need for API access. The package uses the rvest package [@Wickham2024] to scrape data directly from Goodreads web pages, eliminating the need for API access. When a user provides search input, the package scans relevant book pages on Goodreads for targeted information. The collected data is then processed and returned as a user-friendly R data frame, which researchers can easily manipulate to suit their specific needs. Figure 1 illustrates the workflow of the *Goodreader* package.
 
-![Goodreader package workflow](workflow.png)
+![Figure 1: Goodreader package workflow](workflow.png)
 
-Table 1 presents the functions of *Goodreader* package. The package streamlines the process of accessing and analyzing Goodreads data through the following steps:
+The package streamlines the process of accessing and analyzing Goodreads data through the following steps:
 
 1. Book Search: Users initiate the process with the search_goodreads() function, which returns a list of matching titles (or author) and their corresponding book IDs.
 2. Book Information Retrieval: Using the book IDs obtained from the search, users can then run the scrape_books() function to gather detailed information about each book, including genres, publication details, and rating distributions.
 3. Review Collection: For a more comprehensive analysis of reader opinions, users can apply the scrape_reviews() function to collect individual reviews for specific books of interest.
 
-## Table 1
-
-*Functions of the Goodreader package*
+**Table 1**: *Functions of the Goodreader package*
 
 | Function | Returned objects | Description |
 |----------|-----------------|-------------|
@@ -99,3 +98,5 @@ The package also offers a suite of functions for performing sentiment analysis a
 - **Social Sciences & Psychology**: Instructors can use *Goodreader* to explore questions related to public opinion, cultural trends, and media reception, making it an ideal tool for courses in media studies, consumer psychology, and communication research.
 
 - **Business & Marketing Research**: Students studying book marketing or consumer behavior can analyze how reviews impact book sales, author branding, and genre preferences, providing insights into audience reception and market trends.
+
+# References
