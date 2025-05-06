@@ -6,7 +6,6 @@ tags:
   - digital humanities
   - educational data science
   - goodreads reviews
-
 authors:
   - name: Chao Liu^[Corresponding Author]
     orcid: 0000-0002-9979-8272
@@ -14,11 +13,11 @@ authors:
 affiliations:
  - name: Cedarville University
    index: 1
-
 date: 3 March 2025
 bibliography: paper.bib
+---
 
-## Summary
+# Summary
 
 The *Goodreader* R package provides an accessible and structured approach to analyzing crowdsourced book reviews from Goodreads, with the goal of making computational text analysis more approachable for educators and students. By streamlining web scraping, sentiment analysis, and topic modeling, *Goodreader* enables users to engage with large-scale literary data without requiring advanced programming skills.
 
@@ -26,7 +25,7 @@ In educational settings, *Goodreader* supports digital humanities, computational
 
 By lowering the technical barriers to computational text analysis, *Goodreader* facilitates active learning, critical thinking, and digital literacy. As an open-source tool, *Goodreader* encourages reproducibility and collaborative research that inspires students to explore the intersection of literature, data, and technology.
 
-## Statement of Need
+# Statement of Need
 
 Computational approaches to text analysis are increasingly important in humanities and social science education, yet many students and educators face significant barriers to entry. Traditional literary analysis relies on close reading (Brooks, 1947; Byron, 2021), surveys (Busselle & Bilandzic, 2009; Miall & Kuiken, 1995), and small-scale content analysis (Filipović, 2018; Suico et al., 2023), while large-scale computational methods often demand extensive programming skills. This gap between theoretical understanding and practical application can hinder broader adoption of computational techniques in related fields. The Goodreader R package fills this gap by providing an accessible tool for retrieving and analyzing book reviews from Goodreads (https://www.goodreads.com/), the world's largest site for readers and book recommendations. By eliminating the need for advanced technical expertise, Goodreader enables educators and students to engage with real-world textual data in meaningful ways.
 
