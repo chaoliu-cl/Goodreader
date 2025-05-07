@@ -9,7 +9,7 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: cld2, dplyr, ggplot2, httr, lubridate, magrittr, parallel, purrr, rvest, rlang, stringr, tidyr, tidytext, tm, topicmodels, utils, wordcloud2
-Suggests: knitr, rmarkdown, testthat (>= 3.0.0), withr, here
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0), withr
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://github.com/chaoliu-cl/Goodreader, http://liu-chao.site/Goodreader/
