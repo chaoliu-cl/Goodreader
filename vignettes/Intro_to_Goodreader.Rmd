@@ -119,7 +119,7 @@ The sentiment scores can be plotted as a histogram:
 sentiment_histogram(sentiment_results)
 ```
 ```{r echo=FALSE, out.width='400px'}
-knitr::include_graphics('../man/figures/sentiment_hist.png')
+knitr::include_graphics('sentiment_hist.png')
 ```
 
 Or a trend of average sentiment score over time:
@@ -128,7 +128,7 @@ Or a trend of average sentiment score over time:
 sentiment_trend(sentiment_results, time_period = "year")
 ```
 ```{r echo=FALSE, out.width='400px'}
-knitr::include_graphics('../man/figures/sentiment_trend.png')
+knitr::include_graphics('sentiment_trend.png')
 ```
 
 ## Perform topic modeling
@@ -151,7 +151,7 @@ Plot the top terms by topic:
 plot_topic_terms(reviews_topic)
 ```
 ```{r echo=FALSE, out.width='400px'}
-knitr::include_graphics('../man/figures/topic_terms.png')
+knitr::include_graphics('topic_terms.png')
 ```
 
 Create a word cloud for each topic:
@@ -161,17 +161,17 @@ gen_topic_clouds(reviews_topic)
 
 Topic 1:
 ```{r echo=FALSE, out.width='400px'}
-knitr::include_graphics('../man/figures/Topic1.png')
+knitr::include_graphics('Topic1.png')
 ```
 
 Topic 2:
 ```{r echo=FALSE, out.width='400px'}
-knitr::include_graphics('../man/figures/Topic2.png')
+knitr::include_graphics('Topic2.png')
 ```
 
 Topic 3:
 ```{r echo=FALSE, out.width='400px'}
-knitr::include_graphics('../man/figures/Topic3.png')
+knitr::include_graphics('Topic3.png')
 ```
 
 
