@@ -9,7 +9,7 @@ including basic negation scope detection."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">Goodreader</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,55 +76,9 @@ including basic negation scope detection.</p>
 <span class="r-in"><span><span class="co"># Run the scrape_reviews function</span></span></span>
 <span class="r-in"><span><span class="va">reviews</span> <span class="op">&lt;-</span> <span class="fu"><a href="scrape_reviews.html">scrape_reviews</a></span><span class="op">(</span><span class="va">temp_file</span>, num_reviews <span class="op">=</span> <span class="fl">5</span>, use_parallel <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total book IDs to process: 3</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Target reviews per book: 5</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Using sequential processing...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Starting to scrape reviews for book ID: 1420</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Selenium message:Process unexpectedly closed with status 1</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Build info: version: '4.0.0-alpha-2', revision: 'f148142cf8', time: '2019-07-01T21:30:10'</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> System info: host: 'pkrvmbietmlfzoi', ip: '10.1.0.145', os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1015-azure', java.version: '17.0.15'</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Driver info: driver.version: unknown</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> remote stacktrace: </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Could not open firefox browser.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Client error message:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 	 Summary: UnknownError</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  	 Detail: An unknown server-side error occurred while processing the command.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 	 Further Details: run errorDetails method</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Check server log for further details.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Error processing book ID 1420: Failed to setup RSelenium driver: Undefined error in httr call. httr output: length(url) == 1 is not TRUE</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Starting to scrape reviews for book ID: 2767052</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Selenium message:Process unexpectedly closed with status 1</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Build info: version: '4.0.0-alpha-2', revision: 'f148142cf8', time: '2019-07-01T21:30:10'</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> System info: host: 'pkrvmbietmlfzoi', ip: '10.1.0.145', os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1015-azure', java.version: '17.0.15'</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Driver info: driver.version: unknown</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> remote stacktrace: </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Could not open firefox browser.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Client error message:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 	 Summary: UnknownError</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  	 Detail: An unknown server-side error occurred while processing the command.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 	 Further Details: run errorDetails method</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Check server log for further details.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Error processing book ID 2767052: Failed to setup RSelenium driver: Undefined error in httr call. httr output: length(url) == 1 is not TRUE</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Starting to scrape reviews for book ID: 10210</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Selenium message:Process unexpectedly closed with status 1</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Build info: version: '4.0.0-alpha-2', revision: 'f148142cf8', time: '2019-07-01T21:30:10'</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> System info: host: 'pkrvmbietmlfzoi', ip: '10.1.0.145', os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1015-azure', java.version: '17.0.15'</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Driver info: driver.version: unknown</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> remote stacktrace: </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Could not open firefox browser.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Client error message:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 	 Summary: UnknownError</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  	 Detail: An unknown server-side error occurred while processing the command.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 	 Further Details: run errorDetails method</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Check server log for further details.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Error processing book ID 10210: Failed to setup RSelenium driver: Undefined error in httr call. httr output: length(url) == 1 is not TRUE</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 2025-06-29 02:30:30.884456 scrape_goodreads_reviews: Completed! All book reviews extracted</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Scraping run time = 13.638747215271</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 2025-06-29 03:54:48.756965 scrape_goodreads_reviews: Completed! All book reviews extracted</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Scraping run time = 7.20507144927979</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Total books processed: 3</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Total reviews collected: 3</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Average reviews per book: 1.0</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Check if reviews were successfully scraped</span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">reviews</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span></span>
@@ -136,14 +90,17 @@ including basic negation scope detection.</p>
 <span class="r-in"><span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"No reviews found. Cannot perform sentiment analysis.\n"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 9</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   book_id reviewer_id reviewer_name review_content reviewer_followers</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 1420    <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>            <span style="color: #BB0000;">NA</span>             <span style="color: #BB0000;">NA</span>                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2767052 <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>            <span style="color: #BB0000;">NA</span>             <span style="color: #BB0000;">NA</span>                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 10210   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>            <span style="color: #BB0000;">NA</span>             <span style="color: #BB0000;">NA</span>                </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 4 more variables: reviewer_total_reviews &lt;lgl&gt;, review_date &lt;lgl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   review_rating &lt;lgl&gt;, sentiment_score &lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 9</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   book_id reviewer_id reviewer_name review_content            reviewer_followers</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 1420    83582       Bill Kerwin   <span style="color: #949494;">"</span>I don't have any earth-…                 <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 1420    91434473    daph pink ♡   <span style="color: #949494;">"</span>if you don't ship Hamra…                  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 1420    44531801    Nayra.Hassan  <span style="color: #949494;">"</span>متردد في قراءة هاملت..س…                  6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> 1420    10171516    jessica       <span style="color: #949494;">"</span>shakespeare when pitchi…                 47</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> 1420    416390      Paul Bryant   <span style="color: #949494;">"</span>The Skinhead Hamlet - S…                 12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> 2767052 3672777     Nataliya      <span style="color: #949494;">"</span>Suzanne Collins has bal…                 15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 4 more variables: reviewer_total_reviews &lt;dbl&gt;, review_date &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   review_rating &lt;dbl&gt;, sentiment_score &lt;dbl&gt;</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Clean up: remove the temporary file</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="va">temp_file</span><span class="op">)</span></span></span>
